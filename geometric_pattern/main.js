@@ -44,3 +44,10 @@ function draw() {
     bVal = bVal + 7;
     }
 }
+
+function keyPressed() {
+    if (keyCode === 115 || keyCode === 83) {
+        saveCanvas('geomtricPattern', 'png');
+    }
+    return false;
+}
