@@ -30,23 +30,23 @@ function draw() {
     }
     
     background(backgroundImage);
-    
     if (keyDown(RIGHT_ARROW) && player.position.x < (width-(playerImage.width/2))){
-    player.position.x = player.position.x += 1.5;
+        player.position.x += 1.5;
     }
     
     if (keyDown(LEFT_ARROW) && player.position.x > (playerImage.width/2)) {
-        player.position.x = player.position.x -= 1.5;
+        player.position.x -= 1.5;
     }
     
     enemy.position.y = enemy.position.y + 3;
     
     if (enemy.position.y > height) {
         enemy.position.y = 0;
-        enemy.position.x = random (5, width-5);
+        enemy.position.x = random(5, width-5);
     }
     
     drawSprites();
+    }
 }
 
 function gameOver() {
